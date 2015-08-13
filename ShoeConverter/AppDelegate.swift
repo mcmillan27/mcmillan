@@ -10,7 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+// Cannot figure out why I have this error.
     var window: UIWindow?
 
 

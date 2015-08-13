@@ -17,6 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var mensConvertedShoeSizeLabel: UILabel!
     
 
+    @IBOutlet weak var womensShoeSizeTextField: UITextField!
+    
+    
+    @IBOutlet weak var womensConvertedShoeSizeLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,16 +35,44 @@ class ViewController: UIViewController {
 
     
     @IBAction func convertButtonPressed(sender: UIButton) {
-    let SizeFromTextField = mensShoeSizeTextField.text
-        let numberFromTextField = SizeFromTextField.toInt()
-        var integerFromTextField = numberFromTextField!
-        let conversionConstant = 30
-        integerFromTextField += conversionConstant
-        mensConvertedShoeSizeLabel.hidden = false
-        let stringWithUpdatedShoeSize = "\(integerFromTextField)"
-        mensConvertedShoeSizeLabel.text = stringWithUpdatedShoeSize
     
-    }
+//        let sizeFromTextField = mensShoeSizeTextField.text
+//        let numberFromTextField = sizeFromTextField.toInt()
+//        var integerFromTextField = numberFromTextField!
+        
+        let sizeFromTextField = mensShoeSizeTextField.text.toInt()!
+        
+        
+        let conversionConstant = 30
+        
+//        integerFromTextField += conversionConstant
+//        mensConvertedShoeSizeLabel.hidden = false
+//        let stringWithUpdatedShoeSize = "\(integerFromTextField)"
+//        mensConvertedShoeSizeLabel.text = stringWithUpdatedShoeSize
+        
+        mensConvertedShoeSizeLabel.hidden = false
+        mensConvertedShoeSizeLabel.text = "\(sizeFromTextField + conversionConstant)" + " and that's some big ass shoes"
+        
+        mensShoeSizeTextField.resignFirstResponder()
+        }
+    
+    
+    @IBAction func womensShoeSizeConvertButtonPressed(sender: UIButton) {
+    
+    
+
+        
+        let sizeFromTextField = Double((womensShoeSizeTextField.text as NSString).doubleValue)
+        
+        let conversionConstant = 30.5
+        
+        womensConvertedShoeSizeLabel.hidden = false
+        womensConvertedShoeSizeLabel.text = "\(sizeFromTextField + conversionConstant)" + " a perfect fit"
+        
+        womensShoeSizeTextField.resignFirstResponder()
+
+        }
+    
     
 
     }
