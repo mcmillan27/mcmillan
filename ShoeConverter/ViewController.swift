@@ -57,13 +57,13 @@ class ViewController: UIViewController {
         }
     
     
-    @IBAction func womensShoeSizeConvertButtonPressed(sender: UIButton) {
+    @IBAction func convertWomensShoeSizeButtonPressed(sender: UIButton) {
     
     
-
-        
+    
+    
+    
         let sizeFromTextField = Double((womensShoeSizeTextField.text as NSString).doubleValue)
-        
         let conversionConstant = 30.5
         
         womensConvertedShoeSizeLabel.hidden = false
